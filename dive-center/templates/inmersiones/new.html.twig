@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Inmersiones{% endblock %}
+
+{% block body %}
+    <h1>Create new Inmersiones</h1>
+
+    {{ include('inmersiones/_form.html.twig') }}
+
+    <a href="{{ path('inmersiones_index') }}">back to list</a>
+{% endblock %}

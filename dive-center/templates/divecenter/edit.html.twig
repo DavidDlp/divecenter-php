@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Divecenter{% endblock %}
+
+{% block body %}
+    <h1>Edit Divecenter</h1>
+
+    {{ include('divecenter/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('divecenter_index') }}">back to list</a>
+
+    {{ include('divecenter/_delete_form.html.twig') }}
+{% endblock %}

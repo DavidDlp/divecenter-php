@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Divecenter index{% endblock %}
+
+{% block body %}
+    <h1>Divecenter index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Ciudad</th>
+                <th>Direccion</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for divecenter in divecenters %}
+            <tr>
+                <td>{{ divecenter.id }}</td>
+                <td>{{ divecenter.name }}</td>
+                <td>{{ divecenter.ciudad }}</td>
+                <td>{{ divecenter.direccion }}</td>
+                <td>{{ divecenter.email }}</td>
+                <td>
+                    <a href="{{ path('divecenter_show', {'id': divecenter.id}) }}">show</a>
+                    <a href="{{ path('divecenter_edit', {'id': divecenter.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('divecenter_new') }}">Create new</a>
+{% endblock %}

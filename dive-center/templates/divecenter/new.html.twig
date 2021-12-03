@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Divecenter{% endblock %}
+
+{% block body %}
+    <h1>Create new Divecenter</h1>
+
+    {{ include('divecenter/_form.html.twig') }}
+
+    <a href="{{ path('divecenter_index') }}">back to list</a>
+{% endblock %}
